@@ -2,7 +2,7 @@ CREATE DATABASE chat;
 
 USE chat;
 
-CREATE TABLE usernames (
+CREATE TABLE users (
   id integer primary key,
   username text not null
 );
@@ -15,11 +15,9 @@ CREATE TABLE rooms (
 CREATE TABLE messages (
   /* Describe your table here.*/
   id integer primary key,
-  messagetext text,
+  text text,
   username integer,
   room integer,
-  -- created_At timestamp,
-  -- updated_At timestamp,
   foreign key (username) REFERENCES usernames(id),
   foreign key (room) REFERENCES rooms(id)
 );

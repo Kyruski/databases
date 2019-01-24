@@ -11,11 +11,11 @@ const makeConnection = (queryPhrase, cb) => {
     database: 'chat'
   });
   dbConnection.connect();
-  dbConnection.query(queryPhrase, (err, results, fields) => {
-    if (err) {
-      throw err;
-    }
-    console.log('results are ', results);
-    console.log('fields are ', fields);
-  });
+  // dbConnection.query('SELECT * FROM ' + queryPhrase, (err, results, fields) => {
+  //   if (err) {
+  //     throw err;
+  //   }
+  //   console.log('results are ', results);
+  //   console.log('fields are ', fields);
+  // });
 };
